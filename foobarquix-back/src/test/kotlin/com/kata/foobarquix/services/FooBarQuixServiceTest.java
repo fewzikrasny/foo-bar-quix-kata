@@ -1,5 +1,7 @@
 package com.kata.foobarquix.services;
 
+import com.kata.foobarquix.configuration.DivisorsAndCorrespondencesProperties;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -11,7 +13,17 @@ import static org.hamcrest.core.IsEqual.equalTo;
 @DisplayName("Service that converts the numbers three, five and seven into the string Foo, Bar and Quix")
 public class FooBarQuixServiceTest {
 
-    private final FooBarQuixService fooBarQuixService = new FooBarQuixService();
+    private FooBarQuixService fooBarQuixService;
+
+    @BeforeEach
+    public void setUp() {
+        final DivisorsAndCorrespondencesProperties divisorsAndCorrespondencesProperties = new DivisorsAndCorrespondencesProperties();
+        divisorsAndCorrespondencesProperties.setDivisorsKeys("3");
+        divisorsAndCorrespondencesProperties.setCorrespondencesValues("Foo");
+
+        fooBarQuixService = new FooBarQuixService(divisorsAndCorrespondencesProperties);
+    }
+
 
     @DisplayName("Handling unmatched numbers")
     @Test
