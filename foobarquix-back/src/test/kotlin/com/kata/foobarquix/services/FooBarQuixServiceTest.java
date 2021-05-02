@@ -1,6 +1,7 @@
 package com.kata.foobarquix.services;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -26,5 +27,23 @@ public class FooBarQuixServiceTest {
         // Then
         assertThat("2", is(equalTo(twoString)));
         assertThat("11", is(equalTo(elevenString)));
+    }
+
+    @DisplayName("Feature that converts the number three to Foo")
+    @Nested
+    class ConvertThreeToFooClass {
+
+        @DisplayName("Manage the input number that divisible by the number 3")
+        @Test
+        public void should_return_foo_when_input_number_is_divisible_by_3() {
+            // Given
+            final int six = 6;
+
+            // When
+            final String foo = fooBarQuixService.convertNumber(six);
+
+            // Then
+            assertThat("Foo", is(equalTo(foo)));
+        }
     }
 }
