@@ -4,7 +4,8 @@ import { FooBarQuixService } from './service/foo-bar-quix.service';
 
 @Component({
   selector: 'app-foo-bar-quix',
-  templateUrl: './foo-bar-quix.component.html'
+  templateUrl: './foo-bar-quix.component.html',
+  styleUrls: ['./foo-bar-quix.component.scss']
 })
 export class FooBarQuixComponent implements OnInit, OnDestroy {
 
