@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { FooBarQuixService } from '../foo-bar-quix.service';
+import { FooBarQuixService } from './service/foo-bar-quix.service';
 
 @Component({
   selector: 'app-foo-bar-quix',
