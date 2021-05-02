@@ -9,9 +9,15 @@ import java.util.stream.IntStream
 class FooBarQuixService(private val divisorsAndCorrespondencesProperties: DivisorsAndCorrespondencesProperties) {
     private final val divisorsAndCorrespondences: HashMap<Int, String> = buildDivisorsAndCorrespondences();
 
+    companion object {
+        const val DELIMETERS = "";
+    }
+
     fun convertNumber(inputNumber: Int): String {
+        val numbers = inputNumber.toString().split(DELIMETERS);
         val outputBuilder = StringBuilder();
         convertInputNumberToStringWhichDivisibleByDivisors(outputBuilder, inputNumber, divisorsAndCorrespondences);
+        convertInputNumberToStringWhichContainsDivisors(numbers, outputBuilder, divisorsAndCorrespondences)
 
         return if (!outputBuilder.toString().isEmpty()) outputBuilder.toString() else inputNumber.toString()
     }
@@ -38,5 +44,19 @@ class FooBarQuixService(private val divisorsAndCorrespondencesProperties: Diviso
             }
         }
         return outputBuilder;
+    }
+
+    /**
+     * Convert the input Number to (Foo)
+     * containing matches (3)
+     * **/
+    private fun convertInputNumberToStringWhichContainsDivisors(numbers: List<String>, outputBuilder: StringBuilder, divisorsAndCorrespondences: java.util.HashMap<Int, String>) {
+        for (number in numbers) {
+            divisorsAndCorrespondences.keys.forEach { divisor ->
+                if (number.equals(divisor.toString())) {
+                    outputBuilder.append(divisorsAndCorrespondences[divisor]);
+                }
+            }
+        }
     }
 }
