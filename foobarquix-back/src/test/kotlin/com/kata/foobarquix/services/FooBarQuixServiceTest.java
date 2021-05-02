@@ -128,4 +128,48 @@ public class FooBarQuixServiceTest {
             assertThat("BarBar", is(equalTo(barBar)));
         }
     }
+
+    @DisplayName("Feature that converts the number seven to Quix")
+    @Nested
+    class ConvertSevenToQuixClass {
+
+        @DisplayName("Manage the input number that divisible by the number 7")
+        @Test
+        public void should_return_bar_when_input_number_is_divisible_by_7() {
+            // Given
+            final int twentyEight = 28;
+
+            // When
+            final String quix = fooBarQuixService.convertNumber(twentyEight);
+
+            // Then
+            assertThat("Quix", is(equalTo(quix)));
+        }
+
+        @DisplayName("Manage the input number that contains the number 7")
+        @Test
+        public void should_return_foo_when_input_number_contains_7() {
+            // Given
+            final int seventeen = 17;
+
+            // When
+            final String quix = fooBarQuixService.convertNumber(seventeen);
+
+            // Then
+            assertThat("Quix", is(equalTo(quix)));
+        }
+
+        @DisplayName("Manage the input number that divisible by the number 7 and contains 7")
+        @Test
+        public void should_return_foo_when_input_number_is_divisible_by_7_and_contains_7() {
+            // Given
+            final int sevenHundredTwentyEight = 728;
+
+            // When
+            final String quixQuix = fooBarQuixService.convertNumber(sevenHundredTwentyEight);
+
+            // Then
+            assertThat("QuixQuix", is(equalTo(quixQuix)));
+        }
+    }
 }
