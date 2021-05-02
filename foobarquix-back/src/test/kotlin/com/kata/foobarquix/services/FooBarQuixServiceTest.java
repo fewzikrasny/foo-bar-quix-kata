@@ -41,6 +41,45 @@ public class FooBarQuixServiceTest {
         assertThat("11", is(equalTo(elevenString)));
     }
 
+    @DisplayName("Manage the match combination foo, bar and quix")
+    @Test
+    public void should_return_combination_of_foo_bar_quix() {
+        // Given
+        final int zero = 0;
+
+        // When
+        final String fooBarQuix = fooBarQuixService.convertNumber(zero);
+
+        // Then
+        assertThat("FooBarQuix", is(equalTo(fooBarQuix)));
+    }
+
+    @DisplayName("Manage the match combination foo and bar")
+    @Test
+    public void should_return_combination_of_foo_bar() {
+        // Given
+        final int sixty = 60;
+
+        // When
+        final String fooBar = fooBarQuixService.convertNumber(sixty);
+
+        // Then
+        assertThat("FooBar", is(equalTo(fooBar)));
+    }
+
+    @DisplayName("Manage the match combination bar and quix")
+    @Test
+    public void should_return_combination_of_bar_quix() {
+        // Given
+        final int fiveHundredSeventyTwo = 572;
+
+        // When
+        final String barQuix = fooBarQuixService.convertNumber(fiveHundredSeventyTwo);
+
+        // Then
+        assertThat("BarQuix", is(equalTo(barQuix)));
+    }
+
     @DisplayName("Feature that converts the number three to Foo")
     @Nested
     class ConvertThreeToFooClass {
