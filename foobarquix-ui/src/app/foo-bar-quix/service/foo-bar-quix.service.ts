@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {Result} from '../model/result';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FooBarQuixService {
-  constructor() { }
+  constructor() {
+  }
 
+  getConvertedValue(inputNumber: number): Observable<Result> {
+    return null;
+  }
 }
