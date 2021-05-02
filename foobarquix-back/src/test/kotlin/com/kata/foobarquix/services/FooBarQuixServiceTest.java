@@ -101,5 +101,31 @@ public class FooBarQuixServiceTest {
             // Then
             assertThat("Bar", is(equalTo(bar)));
         }
+
+        @DisplayName("Manage the input number that contains the number 5")
+        @Test
+        public void should_return_foo_when_input_number_contains_5() {
+            // Given
+            final int fiftyTwo = 52;
+
+            // When
+            final String bar = fooBarQuixService.convertNumber(fiftyTwo);
+
+            // Then
+            assertThat("Bar", is(equalTo(bar)));
+        }
+
+        @DisplayName("Manage the input number that divisible by the number 5 and contains 5")
+        @Test
+        public void should_return_foo_when_input_number_is_divisible_by_5_and_contains_5() {
+            // Given
+            final int fifty = 50;
+
+            // When
+            final String barBar = fooBarQuixService.convertNumber(fifty);
+
+            // Then
+            assertThat("BarBar", is(equalTo(barBar)));
+        }
     }
 }
