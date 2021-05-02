@@ -84,4 +84,22 @@ public class FooBarQuixServiceTest {
             assertThat("FooFoo", is(equalTo(fooFoo)));
         }
     }
+
+    @DisplayName("Feature that converts the number five to Bar")
+    @Nested
+    class ConvertFiveToBarClass {
+
+        @DisplayName("Manage the input number that divisible by the number 5")
+        @Test
+        public void should_return_bar_when_input_number_is_divisible_by_5() {
+            // Given
+            final int twenty = 20;
+
+            // When
+            final String bar = fooBarQuixService.convertNumber(twenty);
+
+            // Then
+            assertThat("Bar", is(equalTo(bar)));
+        }
+    }
 }
