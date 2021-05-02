@@ -18,8 +18,8 @@ public class FooBarQuixServiceTest {
     @BeforeEach
     public void setUp() {
         final DivisorsAndCorrespondencesProperties divisorsAndCorrespondencesProperties = new DivisorsAndCorrespondencesProperties();
-        divisorsAndCorrespondencesProperties.setDivisorsKeys("3,5");
-        divisorsAndCorrespondencesProperties.setCorrespondencesValues("Foo,Bar");
+        divisorsAndCorrespondencesProperties.setDivisorsKeys("3,5,7");
+        divisorsAndCorrespondencesProperties.setCorrespondencesValues("Foo,Bar,Quix");
 
         fooBarQuixService = new FooBarQuixService(divisorsAndCorrespondencesProperties);
     }
