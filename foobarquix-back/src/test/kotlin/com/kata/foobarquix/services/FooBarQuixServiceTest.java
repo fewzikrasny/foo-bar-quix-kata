@@ -70,5 +70,18 @@ public class FooBarQuixServiceTest {
             // Then
             assertThat("Foo", is(equalTo(foo)));
         }
+
+        @DisplayName("Manage the input number that divisible by the number 3 and contains 3")
+        @Test
+        public void should_return_foo_when_input_number_is_divisible_by_3_and_contains_3() {
+            // Given
+            final int thirtySix = 36;
+
+            // When
+            final String fooFoo = fooBarQuixService.convertNumber(thirtySix);
+
+            // Then
+            assertThat("FooFoo", is(equalTo(fooFoo)));
+        }
     }
 }
