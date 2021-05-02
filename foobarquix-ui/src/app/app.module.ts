@@ -21,7 +21,11 @@ import {BackEndInstructionComponent} from './back-end-instruction/back-end-instr
     BrowserModule, ReactiveFormsModule, HttpClientModule,
     RouterModule.forRoot([
       {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: 'home', component: HomeComponent}
+      {path: 'home', component: HomeComponent},
+      {
+        path: 'foo-bar-quix',
+        loadChildren: () => import('./foo-bar-quix/foo-bar-quix.module').then(mod => mod.FooBarQuixModule)
+      }
     ])
   ],
   providers: [
