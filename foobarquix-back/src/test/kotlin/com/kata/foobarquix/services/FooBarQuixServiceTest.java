@@ -57,5 +57,18 @@ public class FooBarQuixServiceTest {
             // Then
             assertThat("Foo", is(equalTo(foo)));
         }
+
+        @DisplayName("Manage the input number that contains the number 3")
+        @Test
+        public void should_return_foo_when_input_number_contains_3() {
+            // Given
+            final int twentyThree = 23;
+
+            // When
+            final String foo = fooBarQuixService.convertNumber(twentyThree);
+
+            // Then
+            assertThat("Foo", is(equalTo(foo)));
+        }
     }
 }
