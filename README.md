@@ -19,7 +19,12 @@ Les logiciels suivants doivent être installés sur votre machine :
   ```
   - Démarrer la partie front dans foobarquix-ui : 
   ```bash
-  ng serve
+  npm run start
   ```
   - Les instructions du kata se trouvent ensuite  [ici](http://localhost:4200/) 
+  
+  ### Extension :
+For the extension of the project and the addition of new dividers and correspondences just modify the application.properties in foo-bar-quix back :
+- map.divisors-keys for dividers
+- map.correspondences-values ​​for correspondences  
 
