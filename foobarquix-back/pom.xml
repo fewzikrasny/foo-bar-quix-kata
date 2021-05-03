@@ -20,6 +20,8 @@
 		<io.cucumber.version>6.10.3</io.cucumber.version>
 		<org.assertj.version>3.18.1</org.assertj.version>
 		<lombok.version>1.18.12</lombok.version>
+		<junit-jupiter.version>5.5.0-M1</junit-jupiter.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 	<dependencies>
@@ -81,6 +83,13 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency><!-- execute JUnit 4 together with JUnit 5 Jupiter tests -->
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>${junit-jupiter.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

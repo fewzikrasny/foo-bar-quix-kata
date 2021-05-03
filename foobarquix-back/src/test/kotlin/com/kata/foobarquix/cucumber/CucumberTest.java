@@ -11,7 +11,7 @@ import org.springframework.test.context.TestPropertySource;
  * Class to run cucumber test
  **/
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", glue = {
+@CucumberOptions(plugin = {"pretty", "html:target/cucumber-report.html"}, features = "src/test/resources/features", glue = {
         "com.kata.foobarquix.cucumber"})
 @TestPropertySource("classpath:application-test.properties")
 @ActiveProfiles("test")

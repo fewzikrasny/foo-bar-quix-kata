@@ -6,7 +6,7 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 @EnableConfigurationProperties
-class FooBarQuixApplication
+open class FooBarQuixApplication
 
 fun main(args: Array<String>) {
 	runApplication<FooBarQuixApplication>(*args)
