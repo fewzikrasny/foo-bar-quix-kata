@@ -1,0 +1,11 @@
+.container {
+  padding-bottom: .5rem;
+
+  &__alert-text {
+    color: red;
+  }
+}
+
+.invalid {
+  border: .13rem solid red;
+}

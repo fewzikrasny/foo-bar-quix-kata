@@ -1,0 +1,13 @@
+<section>
+  <form [formGroup]="fooBarQuixForm">
+    <div class="container">
+      <label for="inputNumber">Number to convert</label>
+      <input class="form-control" id="inputNumber" type="number" placeholder="inputNumber"
+             [class.invalid]="inputNumber.touched && inputNumber.invalid"
+             formControlName="inputNumber"/>
+      <div *ngIf="inputNumber.invalid && (inputNumber.dirty || inputNumber.touched)">
+        <p class="container__alert-text" *ngIf="inputNumber.errors.required">This field is required</p>
+      </div>
+    </div>
+  </form>
+</section>

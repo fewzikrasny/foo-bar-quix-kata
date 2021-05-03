@@ -1,6 +1,18 @@
-<div>
-<div class="container">
-    <h2>Already converted values : </h2>
-</div>
-<app-foo-bar-quix-form (submitNumberOutput)="convertNumber($event)"></app-foo-bar-quix-form>
-</div>
+<section>
+  <div>
+    <div class="container">
+      <h2>Already converted values : </h2>
+      <div class="container__number-converted" *ngFor="let number of numbersConverted">
+        {{number.numberToConvert}} and the result is {{number.result}}
+      </div>
+    </div>
+    <app-foo-bar-quix-form (submitNumberOutput)="convertNumber($event)"></app-foo-bar-quix-form>
+    <div class="container">
+      <button class="container__button" type="button" (click)="numberConverted()"
+              [disabled]="!inputNumber" [class.disabled]="!inputNumber">
+        Convert
+      </button>
+    </div>
+  </div>
+</section>
+

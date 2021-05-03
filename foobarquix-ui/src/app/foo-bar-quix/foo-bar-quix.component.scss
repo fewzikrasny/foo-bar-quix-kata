@@ -1,0 +1,22 @@
+$color-light-grey: #eeeeee;
+$color-light-blue: #337ab7;
+.container {
+
+  &__button {
+    background-color: $color-light-blue;
+  }
+
+  &__number-converted {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    margin-bottom: .38rem;
+    padding-left: .85rem;
+    border-radius: .25rem;
+    background-color: $color-light-grey;
+  }
+}
+
+.disabled {
+  background-color: gray;
+}
