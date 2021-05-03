@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FooBarQuixFormComponent} from './foo-bar-quix-form/foo-bar-quix-form.component';
 import {FooBarQuixComponent} from './foo-bar-quix.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {FooBarQuixRoutingModule} from './foo-bar-quix-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {ReactiveFormsModule} from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FooBarQuixRoutingModule
   ]
 })
 export class FooBarQuixModule {
